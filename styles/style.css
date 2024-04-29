@@ -343,7 +343,7 @@ footer .button:hover,
 
 .like-icon .sparks {
   transition: fill 0.3s 0.06s linear forwards;
-  fill: (--main-text-color);
+  fill: var(--main-text-color);
 }
 
 .card__like-button {
