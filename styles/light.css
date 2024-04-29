@@ -1,5 +1,5 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
-:root {
+.theme-light {
     --bg-color: #fff;
     --main-text-color: #000000;
     --bg-color-lable: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 1));
@@ -8,21 +8,6 @@
     --background-image-fixed: repeating-linear-gradient(90deg, #d3d3d3,  #d3d3d3 2px, transparent 2px, transparent 4px),
     repeating-linear-gradient(180deg, #e7e7e7,  #e7e7e7 2px, transparent 2px, transparent 4px),
     linear-gradient(180deg, rgb(231, 231, 231) 0.01%,  rgb(26, 26, 26)  100%);
-  
-    --font-family-main: "Inter-Variable", 'Helvetica', sans-serif;
-    --font-family-accent: "PressStart2P-Regular", 'Verdana', sans-serif;
-  
-  
-    --font-weight-regular: 400;
-    --font-weight-bold: 700;
-  
-    --font-size-p: 14px;
-    --font-size-h4: 18px;
-    --font-size-h3: var(--font-size-h4);
-    --font-size-h2: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-    --font-size-h1: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  
-    --decor-item-visible:  visible;
   }
   
   
