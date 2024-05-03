@@ -12,3 +12,33 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes move {
+    from {
+      transform: translateX(-8px);
+    }
+    to {
+      transform: translateX(-4px);
+    }
+  }
+
+  @keyframes scales {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.5);
+    }
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
