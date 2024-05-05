@@ -2,8 +2,10 @@
 :root {
     --bg-color: #fff;
     --main-text-color: #000;
+    --button-hover: #fff;
+    --button-text-color: #ffffff;
     --bg-color-lable: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 1));
-    
+    --button-hover: var(var(--bg-color));
     --color-icon-main-body: red;
     --color_text-shadow: rgba(255, 255, 255, 1);
     --background-image-fixed: repeating-linear-gradient(90deg, #d3d3d3,  #d3d3d3 2px, transparent 2px, transparent 4px),
@@ -11,7 +13,7 @@
     linear-gradient(180deg, #E7E7E7 0.01%,  #1A1A1A  100%);
   
     --font-family-main: "Inter-Variable", 'Helvetica', sans-serif;
-    --font-family-accent: "PressStart2P-Regular", 'Verdana', sans-serif;
+    --font-family-accent: "PressStart2P-Regular", 'Papyrus', 'fantasy';
   
   
     --font-weight-regular: 400;

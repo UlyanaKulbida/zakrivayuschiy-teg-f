@@ -5,9 +5,8 @@
   src:
     local('PressStart2P'),
     url(../fonts/PressStart2P-Regular.woff)
-    format('woff2 supports variations'),
-    url(../fonts/PressStart2P-Regular.woff);
-    font-weight: 400;  
+    format('woff');
+  font-weight: 400;  
 }
 
 @font-face  {
@@ -19,5 +18,5 @@
       format('woff2 supports variations'),
       url(../fonts/Inter-Variable.woff2)
       format('woff2-variations');
-      font-weight: 400 785;    
+    font-weight: 400 785;    
   }

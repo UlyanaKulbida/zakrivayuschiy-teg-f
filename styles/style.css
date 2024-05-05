@@ -54,7 +54,7 @@
 
 .header-title {
   font-family: var(--font-family-accent, "PressStart2P-Regular", 'Verdana', sans-serif);
-  font-variation-settings: "wght" var(--font-weight-regular, 400);
+  font-weight: var(--font-weight-regular, 400);
   line-height: var(--font-size-h1,  clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem));
   font-size: var(--font-size-h1,  clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem));
   text-decoration: none;
@@ -65,7 +65,7 @@
 .header-subtitle {
   text-transform: uppercase;
   font-family:var(--font-family-accent, "PressStart2P-Regular", 'Verdana', sans-serif);
-  font-variation-settings: "wght" var(--font-weight-regular, 400);
+  font-weight: var(--font-weight-regular, 400);
   line-height: var(--font-size-h2, clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem));
   font-size: var(--font-size-h2, clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem));
   padding-block-start: 20px;
@@ -78,7 +78,7 @@
 
 .theme-menu__item {
   font-family:var(--font-family-accent, "PressStart2P-Regular", 'Verdana', sans-serif);
-  font-variation-settings: "wght" var(--font-weight-regular, 400);
+  font-weight: var(--font-weight-regular, 400);
   line-height: var(--font-size-p, 14px);
   font-size: var(--font-size-p, 14px);
   text-transform: uppercase;
@@ -173,7 +173,7 @@ button:active {
   text-shadow: -1px 0 var(--color_text-shadow, rgba(255, 255, 255, 1)), 0 1px var(--color_text-shadow, rgba(255, 255, 255, 1)),
     1px 0 var(--color_text-shadow, rgba(255, 255, 255, 1)), 0 -1px var(--color_text-shadow, rgba(255, 255, 255, 1));
   mix-blend-mode: hard-light;
-  opacity: 100%;
+  opacity: 50%;
   z-index: 1;
 }
 
@@ -266,12 +266,15 @@ main .post:nth-child(8) .post-img {
   opacity: 0;
 }
 
+.card__controls .card__icon-button:hover .core {
+  fill: var(--main-text-color, #000);
+  transition: fill 0s linear 0.05s ;
+}
 footer .button:hover,
-.card__controls .card__icon-button:hover .core,
 .card__controls .card__icon-button:hover .contour,
 .card__controls .card__icon-button:hover .main-body {
   fill: var(--main-text-color, #000);
-  transition: fill 0s 0.03s linear;
+  transition: fill 0.3s 0.05s linear;
 }
 
 .card__controls .card__icon-button:active .core,
@@ -286,47 +289,6 @@ footer .button:hover,
   transition: fill 0.3s 0.05s linear;
 }
 
-.like-icon.is-liked .core {
-  fill: var(--color-icon-main-body, red);
-  transition: fill 0.3s linear;
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--color-icon-main-body, red);
-  transition: fill 0.03s 0.05s linear;
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--color-icon-main-body, red);
-  transition: fill 0.3s 0.06s linear;
-}
-
-.like-icon.Unlike .contour {
-  fill: var(--main-text-color, #000);
-  transition: fill 0.3s 0.06s linear;
-}
-
-.like-icon.Unlike .main-body {
-  fill: var(--bg-color, #fff);
-  transition: fill 0.3s 0.06s linear;
-}
-
-.like-icon.is-liked .heart {
-  animation: scales 0.3s 1 alternate ease-in backwards;
-  transform-origin: center;
-}
-
-.like-icon.is-liked .sparks {
-  animation: blink 0.30s ease-in .5s alternate;
-  transform-origin: center;
-  fill: var(--color-icon-main-body, red);
-}
-
-.like-icon .sparks {
-  transition: fill 0.3s 0.06s linear;
-  fill: var(--main-text-color, #000);
-}
-
 .card__like-button {
   min-width: 130px;
   min-height: 36px;
@@ -335,46 +297,51 @@ footer .button:hover,
   margin-block-end: 21px;
   z-index: 1;
   outline: none;
+  background-color: var(--bg-color, #fff);
 }
 
 .card__like-button::before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: min(0.07vw, 1px);
-  height: 98%;
+  bottom: 0;
+  height: 99%;
   width: 0%;
-  background-color: var(--main-text-color, #000);
-  transition: all 0.5s ease-in-out;
+  background: var(--button-hover, #000);
+  transition: all 0.3s ease-in-out;
   z-index: -1;
 }
 
 .card__like-button:hover::before {
-  border: none;
   width: 101%;
-  background-blend-mode: difference;
 }
-
-.card__like-button:hover {
-  transition: all 0.5s ease-in-out;
-  color: var(--bg-color, #fff);
-}
-
-.card__like-button:focus-visible {
-  outline: none;
-  box-shadow: 2px 2px 0px 0px var(--main-text-color);
-} 
 
 .button__text {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
   display: block;
+  color: var(--button-text-color);
   font-family:var(--font-family-accent, "PressStart2P-Regular", 'Verdana', sans-serif);
-  font-variation-settings: "wght" var(--font-weight-regular, 400);
+  font-weight: var(--font-weight-regular, 400);
   font-size: var(--font-size-p, 14px);
-  line-height: 12.6px;
+  line-height: 15.6px;
   padding-block: 10px;
   align-self: end;
   outline: 2px solid var(--main-text-color, #000);
 }
+
+.card__like-button:focus-visible {
+  outline: none;
+  box-shadow: 3px 3px 0px 0px var(--main-text-color);
+}
+
+.button-footer:focus-visible,
+.button_dialog:focus-visible, 
+.button:focus-visible {
+  outline: 2px solid #000;
+  box-shadow: 3px 3px 0px 0px var(--main-text-color);
+} 
 
 .post .button__text {
   max-width: 130px;
@@ -382,7 +349,9 @@ footer .button:hover,
 
 /* ************  СЕКЦИЯ FOOTER  ************ */
 
-footer .button {
+.button-footer {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -392,11 +361,30 @@ footer .button {
   outline: 2px solid var(--main-text-color, #000);
 }
 
+.button-footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0px;
+  height: 100%;
+  width: 0%;
+  background-color: var(--button-hover, #fff);
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.button-footer:hover::before{
+  width: 100%;
+}
+
 footer svg {
-  stroke-width: 0%;
+  stroke-width: 0%;  
 }
 
 .button_svg {
+  position: relative;
+  color: var( --button-text-color, #fff);
+  mix-blend-mode: difference;  
   margin-inline-start: min(1.32vw, 19px);
   margin-inline-end: min(0.56vw, 8px);
   align-self: center;
@@ -407,7 +395,8 @@ footer svg {
 
 .button_svg-dialog {
   transform: scale(1.8);
-  padding-left: 8px;
+  padding-block-start: 3px;
+  padding-inline-start: 8px;
   align-self: flex-end;
   width: 39px;
   height: 39px;
@@ -419,6 +408,31 @@ footer .button__text {
   padding-inline-start: 0;
   margin: 0;
   outline: transparent;
+}
+
+
+.button_dialog::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 121px;
+  /* bottom: 84px; */
+  height: 21%;
+  width: 0%;
+  background-color: var(--button-hover);
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.button_dialog:hover::before{
+  border: none;
+  width: 82%;
+  background-blend-mode: difference;
+}
+
+.button_dialog:hover {
+  transition: all 0.5s ease-in-out;
+  color: var(--bg-color, #fff);
 }
 
 dialog[open] {
@@ -460,6 +474,7 @@ dialog .button__text {
   display: block;
   text-align: center;
   margin-block: 0;
+  padding-inline: 130px;
   padding-block: 11.8px;
   font-family:var(--font-family-accent, "PressStart2P-Regular", 'Verdana', sans-serif);
   line-height: 12.6px;
@@ -500,26 +515,45 @@ dialog .button__text {
 
   /* ******* FOOTER  @media width 375px ******* */
 
-  footer .button {
+  .button-footer {
     margin-block-start: min(14.67vw, 55px);
     margin-block-end: min(26.67vw, 103px);
     display: flex;
     flex-direction: column;
-    padding-block-end: 9px;
+    padding-block: min(3.73vw, 14px);
+    padding-inline: min(4.80vw, 18px);
+  }
+
+  dialog[open] {
+    padding-block: 30px;
+    padding-inline: 42px;
+  }
+
+  .button_dialog:hover::before {
+    border: none;
+    width: 76%;
+  }
+
+  .button_dialog::before {
+    left: 41px;
+    top: 122px;
+    height: 20%;
+  }
+
+  .button_dialog {
+    padding-inline: 113px;
   }
 
   .button_svg {
-    margin-block-start: 15px;
-    margin-block-end: 2px;
-    min-width: 29px;
-    min-height: 29px;
+    transform: scale(1.34);
+    margin-block-start: 4px;
+    min-width: 28px;
+    min-height: 28px;
   }
-
-  footer .button__text {
-    display: inline-block;
-    width: 306px;
-    padding-inline-start: 12px;
+  .dialog-content .button__text{
+    width: 195px;
   }
+  
 
   @media (width <= 451px) {
     main .post:nth-child(1) .header-title {

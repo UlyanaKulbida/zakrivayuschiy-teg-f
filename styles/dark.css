@@ -1,29 +1,25 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
- .theme-dark {  
+ :root.theme-dark {  
     --bg-color: #000000;
     --main-text-color: #00CC14;
+    --button-hover: #00cc14;
     --bg-color-lable: linear-gradient(rgb(0, 204, 20 / 1), rgb(0, 204, 20 / 1));
-    /* --color-icon-main-body: #00CC14; */
     --color_text-shadow: rgba(0, 0, 0, 1);
     --background-image-fixed: repeating-linear-gradient(90deg, #000,  #000 2px, transparent 2px, transparent 4px),
     repeating-linear-gradient(180deg, #000,  #000 2px, transparent 2px, transparent 4px),
     linear-gradient(180deg, #007F0C 0%,  #004306  100%);
-  
-    /* --background-image-fixed: repeating-linear-gradient(90deg, #000,  #000 2px, transparent 2px, transparent 4px),
-    repeating-linear-gradient(180deg, #007F0C,  #007F0C 2px, transparent 2px, transparent 4px),
-    linear-gradient(180deg, rgb(231, 231, 231) 0.01%,  rgb(26, 26, 26)  100%); */
   } 
   
   @media (prefers-color-scheme: dark) {
     :root  {
     --bg-color: #000000;
     --main-text-color: #00CC14;
+    --button-hover: rgba(0, 204, 20, 1);
     --bg-color-lable: linear-gradient(rgb(0, 204, 20 / 1), rgb(0, 204, 20 / 1));
-    --color-icon-main-body: #00CC14;
     --color_text-shadow: rgba(0, 0, 0, 1);
     --background-image-fixed: repeating-linear-gradient(90deg, #000,  #000 2px, transparent 2px, transparent 4px),
-    repeating-linear-gradient(180deg, #007F0C,  #007F0C 2px, transparent 2px, transparent 4px),
-    linear-gradient( rgb(0, 127, 12, 1) 0.01%,  rgb(0, 67, 6, 1)  80%);
+    repeating-linear-gradient(180deg, #000,  #000 2px, transparent 2px, transparent 4px),
+    linear-gradient(180deg, #007F0C 0%,  #004306  100%);
     }
   }
 

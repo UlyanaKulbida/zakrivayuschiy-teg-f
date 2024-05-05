@@ -18,9 +18,7 @@
   </head>
   <body class="page">
     <header class="header">
-      <a href="/" class="header-title">
-        <span>&lt;/html&gt;</span>
-    </a>
+      <a class="header-title">&lt;/html&gt;</a>
       <h1 class="header-subtitle">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
@@ -294,7 +292,7 @@
     </main>
 
     <footer class="footer">
-      <button class="button"
+      <button class="button-footer"
       type="button" 
       onclick="window.myDialog.showModal()"
       aria-controls="myDialog">
@@ -313,8 +311,8 @@
           </svg>
           <span class="button__text">Вставьте дискету,&nbsp;чтобы продолжить</span>
         </div>
-        <form method="dialog" class="button_dialog">
-          <button type="submit" autofocus="autofocus">OK</button>
+        <form method="dialog"> 
+          <button class="button_dialog" type="submit" autofocus="autofocus">OK</button>
         </form>
       </dialog>
 
