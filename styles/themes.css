@@ -8,7 +8,7 @@
     --bg-color: #fff;
     --main-text-color: #000000;
     --button-hover: #000;
-    --button-text-color: #ffffff;
+    --button-text-color: #fff;
     --bg-color-lable: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 1));    
     --color-icon-main-body: red;
     --color_text-shadow: rgba(255, 255, 255, 1);
@@ -34,7 +34,7 @@
       --bg-color: #fff;
       --main-text-color: #000000;
       --button-hover: #000;
-      --button-text-color: #ffffff;
+      --button-text-color: #fff;
       --bg-color-lable: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 1));      
       --color-icon-main-body: red;
       --color_text-shadow: rgba(255, 255, 255, 1);

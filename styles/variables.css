@@ -3,7 +3,7 @@
     --bg-color: #fff;
     --main-text-color: #000;
     --button-hover: #fff;
-    --button-text-color: #ffffff;
+    --button-text-color: #fff;
     --bg-color-lable: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 1));
     --button-hover: var(var(--bg-color));
     --color-icon-main-body: red;
