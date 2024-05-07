@@ -32,7 +32,7 @@
   background-position: center;
   background-attachment: fixed;
   background-color: var(--bg-color, #fff);
-  font-family: var(--font-family-main, "Inter-Variable", 'Helvetica', sans-serif);
+  font-family: var(--font-family-main),'Helvetica', sans-serif;
   font-size: var(--font-size-p, 14px);
   color: var(--main-text-color, #000);
 }
@@ -53,7 +53,7 @@
 }
 
 .header-title {
-  font-family: var(--font-family-accent, "PressStart2P-Regular", 'Papyrus', 'fantasy');
+  font-family: var(--font-family-accent), Papyrus, fantasy;
   font-weight: var(--font-weight-regular, 400);
   line-height: var(--font-size-h1,  clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem));
   font-size: var(--font-size-h1,  clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem));
@@ -64,7 +64,7 @@
 
 .header-subtitle {
   text-transform: uppercase;
-  font-family:var(--font-family-accent, "PressStart2P-Regular", 'Papyrus', 'fantasy');
+  font-family:var(--font-family-accent), Papyrus, fantasy;
   font-weight: var(--font-weight-regular, 400);
   line-height: var(--font-size-h2, clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem));
   font-size: var(--font-size-h2, clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem));
@@ -77,7 +77,7 @@
 }
 
 .theme-menu__item {
-  font-family:var(--font-family-accent, "PressStart2P-Regular", 'Papyrus', 'fantasy');
+  font-family:var(--font-family-accent), Papyrus, fantasy;
   font-weight: var(--font-weight-regular, 400);
   line-height: var(--font-size-p, 14px);
   font-size: var(--font-size-p, 14px);
@@ -252,14 +252,21 @@ main .post:nth-child(8) .post-img {
 .card__controls {
   display: flex;
   justify-content: end;
+  align-items: center;
   margin-block-start: 6px;
   margin-block-end: 3px;
   margin-inline-end: 25px;
 }
 
 .card__icon-button {
-  margin-block-start: 3px;
+  width: 40px;
+  height: 39px;
+  margin-block-start: 1px;
   margin-inline-end: 6px;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--main-text-color, #000);
 }
 
 .sparks {
@@ -323,7 +330,7 @@ footer .button:hover,
   mix-blend-mode: difference;
   display: block;
   color: var(--button-text-color, #fff);
-  font-family:var(--font-family-accent, "PressStart2P-Regular", 'Papyrus', 'fantasy');
+  font-family:var(--font-family-accent), Papyrus, fantasy;
   font-weight: var(--font-weight-regular, 400);
   font-size: var(--font-size-p, 14px);
   line-height: 15.6px;
@@ -425,7 +432,7 @@ footer .button__text {
 .button_dialog:hover::before{
   border: none;
   width: 82%;
-  background-blend-mode: difference;
+  /* background-blend-mode: difference; */
 }
 
 dialog[open] {
@@ -470,7 +477,7 @@ dialog .button__text {
   margin-block: 0;
   padding-inline: 130px;
   padding-block: 11.8px;
-  font-family:var(--font-family-accent, "PressStart2P-Regular", 'Papyrus', 'fantasy');
+  font-family:var(--font-family-accent), Papyrus, fantasy;
   line-height: 12.6px;
   align-items: center;
   outline: 2px solid var(--main-text-color, #000);
@@ -531,7 +538,7 @@ dialog .button__text {
   .button_dialog::before {
     left: 41px;
     top: 122px;
-    height: 20%;
+    /* height: 24%; */
   }
 
   .button_dialog {
